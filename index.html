@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on/off</title>
+    <style>
+        .imagens > img{
+            width:49%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imagens">
+        <img src="lampada_off.jpeg" alt="lampada apagada" id="off">
+        <img src="lampada_on.jpeg" alt="lampada apagada" id="on">
+    </div>
+    <button onclick="ligar()" id="clickliga">ligar</button>
+    <button onclick="desligar()" id= "clickdesliga" >desligar</button>
+    <script>
+        function ligar() {
+            document.getElementById("off").style.display = "none"
+            document.getElementById("on").style.display = ""
+        }
+        function desligar(){
+            document.getElementById("on").style.display = "none"
+            document.getElementById("off").style.display = ""
+        }
+        document.getElementById("on").style.display = "none"
+
+    </script>
+</body>
+</html>

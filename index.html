@@ -5,29 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>on/off</title>
     <style>
+
         .imagens > img{
-            width:49%;
-            max-width: 500px;
+            width:50%;
+            margin-top:8%;
+            max-width: 200px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 20px;
         }
+
+        button{
+            width:25%;
+            margin-top: 2%;
+            max-width: 150px;
+            height: 75px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25%;
+            border-style: solid;
+            font-family: Garamond, serif;
+            font-size: large;
+        }
+        
+        img{
+            border-radius: 20px;
+        }
+        
+        #off{
+            border: 10px;
+            border-color: blue;
+            border-style: solid;
+        }
+
+        #on{
+            border: 10px;
+            border-color: blue;
+            border-style: solid;
+        }
+
+        body{
+            background-size: cover;
+        }
+
     </style>
 </head>
-<body>
+<body background="backgroundtosite2.jpg">
     <div class="imagens">
         <img src="lampada_off.jpeg" alt="lampada apagada" id="off">
         <img src="lampada_on.jpeg" alt="lampada apagada" id="on">
     </div>
-    <button onclick="ligar()" id="clickliga">ligar</button>
-    <button onclick="desligar()" id= "clickdesliga" >desligar</button>
+    <button onclick="ligar()" id="clickliga">LIGAR</button>
+    <button onclick="desligar()" id= "clickdesliga" >DESLIGAR</button>
     <script>
         function ligar() {
             document.getElementById("off").style.display = "none"
             document.getElementById("on").style.display = ""
+            document.getElementById("clickliga").style.display = "none"
+            document.getElementById("clickdesliga").style.display = ""
         }
         function desligar(){
             document.getElementById("on").style.display = "none"
             document.getElementById("off").style.display = ""
+            document.getElementById("clickliga").style.display = ""
+            document.getElementById("clickdesliga").style.display = "none"
         }
         document.getElementById("on").style.display = "none"
+        document.getElementById("clickdesliga").style.display = "none"
+
 
     </script>
 </body>
